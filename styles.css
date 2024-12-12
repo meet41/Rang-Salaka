@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+table {
+    width: 100%;
+    height: fit-content;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+.letter-cell {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.letter-cell:hover {
+    background-color: #f0f0f0;
+}
+
+.alert-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 1.5em;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close-alert {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff5c5c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-alert:hover {
+    background-color: #ff1c1c;
+}
+
+@media (max-width: 768px) {
+    th, td {
+        padding: 5px;
+        font-size: 1em;
+    }
+}
