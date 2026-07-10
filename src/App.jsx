@@ -69,7 +69,6 @@ const descriptions = [
 ];
 
 function normalizeStr(s) {
-  // Node/Vite may not support Unicode property escapes; strip tags, spaces, and common punctuation.
   return s
     .replace(/<br\s*\/>|<br>/gi, '')
     .replace(/\s+/g, '')
@@ -107,7 +106,6 @@ export default function App() {
     let s = '';
     let steps = 0;
 
-    // Track best inclusion match as we build the string
     let inclusionBestIndex = -1;
     let inclusionBestLen = 0;
 
@@ -125,9 +123,10 @@ export default function App() {
       });
 
       const nextC = (c + 18) % colCount;
-      if (nextC < c) r += 1; // move down on wrap
+      if (nextC < c) r += 1;
       c = nextC;
 
+      // This was Test Phase
       // Ensure at least 10 steps before allowing early decision
       if (steps >= 10 && inclusionBestIndex !== -1) {
         // We could break early, but continue to try to find a longer inclusion match
@@ -153,7 +152,7 @@ export default function App() {
           bestIndex = idx;
         }
       });
-      finalIndex = bestIndex; // Always choose the best available
+      finalIndex = bestIndex;
     }
 
     setModalContent({
@@ -169,11 +168,11 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <a href="#grid" className="title-link">Rang Salaka</a>
+        <a href="#grid" className="title-link">Rang Shalaka</a>
         <nav className="nav">
           <a href="#grid" className="jump"><b>Jump to Table</b></a> &nbsp;|&nbsp;
           <a href="https://drive.google.com/file/d/1Me09OQkLW00VaY4e-ak1hjW_nobks3Vu/view?usp=sharing">
-            <strong>Rang Salaka PDF - Print This!</strong>
+            <strong>Rang Shalaka PDF - Print This!</strong>
           </a> &nbsp;|&nbsp;
           <a href="https://www.youtube.com/channel/UCy9L8C4AtoTWMIjdAA601VQ" target="_blank" rel="noopener noreferrer" className="bottom-link">
             <strong>Gurudev Datt Krupa Karo Zatt - YouTube Channel</strong>
@@ -184,7 +183,7 @@ export default function App() {
       <main>
         <section id="grid" className="grid-section">
           <div className="table-card">
-            <h2 className="table-title">રંગ શલાકા (Rang Salaka)</h2>
+            <h2 className="table-title">રંગ શલાકા (Rang Shalaka)</h2>
             <div className="table-wrapper">
               <table className="table" role="grid">
                 <thead>
